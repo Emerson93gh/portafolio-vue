@@ -1,17 +1,18 @@
 <script setup>
 import { defineProps } from 'vue'
-import SvgIcon from './SvgIcon.vue';
+import SvgIcon from '@/components/SvgIcon.vue';
 
 const props = defineProps({
-  type: String,
-  label: String,
+  type:        String,
+  label:       String,
   placeholder: String,
-  icon: String,
-  required: Boolean,
-  readOnly: Boolean,
-  classes: String,
-  labelClass: String,
-  iconSvg: String,
+  icon:        String,
+  required:    Boolean,
+  readOnly:    Boolean,
+  classes:     String,
+  labelClass:  String,
+  iconSvg:     String,
+  modelValue:  String,
 })
 
 </script>
@@ -32,6 +33,8 @@ const props = defineProps({
                     props.classes, 
                     'block w-full pl-10 pr-3 py-2 border-gray-300 focus:border-indigo-500 rounded-md'
                 ]" 
+                :value="props.modelValue"
+                @input="$emit('update:modelValue', $event.target.value)"
             />
         </div>
     </div>
