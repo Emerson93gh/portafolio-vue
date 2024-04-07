@@ -12,11 +12,12 @@ const route = useRoute()
 //     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 // }
 const navigation = [
-  { name: 'Inicio', href: '/inicio', current: true },
-  { name: 'Acerca de mi', href: '/about', current: false },
-  { name: 'Proyectos', href: '/proyectos', current: false },
-  { name: 'Calendar', href: '/calendar', current: false },
-  { name: 'Repositorios', href: '/repositorios', current: false },
+  { name: 'Inicio',       href: '/inicio',       current: true },
+  { name: 'Acerca de mi', href: '/acerca_de_mi', current: false },
+  { name: 'Contacto',     href: '/contacto',     current: false },
+  //{ name: 'Proyectos', href: '/proyectos', current: false },
+  //{ name: 'Calendar', href: '/calendar', current: false },
+  //{ name: 'Repositorios', href: '/repositorios', current: false },
 ]
 
 const isOpen = ref(false)
